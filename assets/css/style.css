@@ -1,0 +1,807 @@
+/* CSS Général */
+
+/* Couleurs imposées par Figma */
+:root {
+  --bleu: #0065FC;
+  --bleu-clair: #DEEBFF;
+  --gris: #F2F2F2;
+}
+
+/* HTML Validator impose un titre ligne 102 */
+.only-for-validator {
+  display: none;
+}
+
+/* Police et taille imposée par Figma */
+body {
+  max-width: 1440px;
+  background-color: white;
+  margin: 0 auto;
+  padding: 0 40px;
+  font-family: 'Raleway', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+}
+
+/* Police imposée par Figma.  <p> lignes 39 et 93 */
+p {
+  font-family: 'Raleway', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  margin: 8px 0;
+}
+
+/* Couleur des icones Font Awesome */
+.bleu {
+  color: var(--bleu)
+}
+
+/* Couleur des icones Font Awesome */
+.gris {
+  color: var(--gris)
+}
+
+/* Police imposée par Figma. <h1> ligne 38 */
+h1 {
+  font-weight: 700;
+  font-size: 22px;
+  margin: 16px 0;
+}
+
+/* Police imposée par Figma. <h2> ligne 246 */
+h2 {
+  font-weight: 700;
+  font-size: 22px;
+  margin: 8px 0;
+}
+
+/* Police imposée par Figma. <h3> nom des hôtels */
+h3 {
+  font-weight: 700;
+  font-size: 16px;
+  margin: 8px 0;
+}
+
+/* Police imposée par Figma. <h4> lignes 54, 241, 378, 386, 393 et <span> ligne 48 */
+h4,
+span {
+  font-weight: 700;
+  font-size: 18px;
+  margin: 10px 0;
+}
+
+/* Police imposée par Figma. <h5> lignes 60, 68, 76, 84 */
+h5 {
+  font-weight: 700;
+  font-size: 17px;
+  margin: 8px 0;
+}
+
+/* Police imposée par Figma. <h6> prix des hôtels */
+h6 {
+  font-weight: 400;
+  font-size: 14px;
+  margin: 8px 0;
+}
+
+/* Liens cliquables + filtres,  */
+a {
+  color: black;
+  text-decoration: none;
+  font-weight: 400;
+  font-size: 14px;
+}
+
+/* CSS Header */
+
+.navbar-content {
+  /* Afficher logo et liens sur la même ligne */
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.navbar-image {
+  /* Taille Figma */
+  width: 61.09px;
+}
+
+nav ul {
+  /* Afficher liens sur une ligne */
+  display: flex;
+  justify-content: right;
+}
+
+.navbar-liens {
+  /* Marge et position des liens et du logo */
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  margin: 0;
+  text-align: center;
+}
+
+li a {
+  padding-left: 30px;
+  padding-right: 30px;
+  /* Permet de coller le hover bleu en haut de la page */
+  padding-top: 41px;
+  text-decoration: none;
+  text-align: right;
+  /* Curseur reste flèche quand hover */
+  cursor: default;
+}
+
+li a:hover {
+  /* Couleur Figma */
+  color: var(--bleu);
+  border-top: 2px solid var(--bleu);
+}
+
+ul {
+  /* Permet de garde logo et liens proche du haut de la page */
+  margin: 0;
+  padding: 0;
+}
+
+.header-content {
+  /* Conserve le titre à gauche */
+  text-align: left;
+  margin-top: 64px;
+}
+
+.header-filtres {
+  /* Aligne filtres */
+  display: flex;
+  margin-top: 30px;
+  align-items: center;
+}
+
+.header-filtre-texte {
+  /* Espace entre favicone et texte */
+  margin-left: 12px;
+}
+
+.header-filtres-button {
+  /* Alligner favicon avec texte du filtre */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 25px;
+  border: 2px solid var(--gris);
+  width: fit-content;
+  padding: 4px 16px;
+  margin-left: 50px;
+}
+
+.header-filtres-button:hover {
+  /* Hover des filtres */
+  background-color: var(--bleu-clair);
+  transform: scale(1.01);
+}
+
+.filter-block {
+  /* Permet de mettre les filtres sur une seule ligne */
+  display: flex;
+}
+
+.header-search {
+  /* Favicone location */
+  display: flex;
+  justify-content: flex-start;
+  margin-top: 15px;
+  height: 49px;
+}
+
+::placeholder {
+  /* Couleur texte placeholder */
+  color: #000000;
+  opacity: 1;
+}
+
+.header-icone {
+  /* Couleur grise autour de la faicone location */
+  background-color: var(--gris);
+  border-radius: 16px 0 0 16px;
+  padding: 16px 16px;
+  border: 1px solid var(--gris);
+}
+
+.header-recherche {
+  /* Police texte de la barre de recherche */
+  font-family: 'Raleway';
+  font-weight: 700;
+  font-size: 18px;
+  padding-left: 20px;
+  width: 16%;
+}
+
+input {
+  /* Bordure barre de recherche */
+  border: 2px solid var(--gris)
+}
+
+.bouton-recherche {
+  /* Bouton rechercher */
+  background-color: var(--bleu);
+  color: white;
+  border: none;
+  font-family: 'Raleway';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  padding: 0 16px;
+  border-radius: 0 16px 16px 0;
+}
+
+.bouton-recherche:hover {
+  /* Permet de voir que l'on survole le bouton rechercher */
+  opacity: 0.9;
+  transform: scale(1.01);
+}
+
+i.bouton-recherche-icone {
+  /* EN mode desktop, n'affiche pas la loupe de favicon */
+  display: none;
+}
+
+.position {
+  /* Aligner la ficivone I avec le texte */
+  display: flex;
+  align-items: center;
+  margin: 25px 0px;
+}
+
+.fa-info {
+  /* Cercle gris autour de la favicon I */
+  border-radius: 50%;
+  width: 16px;
+  height: 16px;
+  padding: 6px 6px;
+  border: 1px solid #D9D9D9;
+  text-align: center;
+  margin-right: 15px;
+}
+
+/* CSS Main */
+
+section {
+  /* Permet d'afficher les plus populaire à côté des hébéregements en Desktop */
+  display: flex;
+  justify-content: space-between;
+}
+
+/* CSS Hébérgements */
+
+.container {
+  /* Section hébérgement */
+  background-color: var(--gris);
+  border-radius: 20px;
+  padding: 30px 40px;
+  width: 62%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+.container-card-block {
+  /* Afficher les cartes hébérgements sur deux rangées en desktop */
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.container-card-block a {
+  /* Affiche correctement les cartes */
+  width: 30%;
+  margin-bottom: 15px;
+  ;
+}
+
+.container-card {
+  /* Affiche correctement les cartes dans le bloque hébergement*/
+  background-color: white;
+  box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.1);
+  border-radius: 15px;
+  max-width: 246px;
+  height: 199px;
+  padding: 5px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  margin: 15px 0;
+  overflow: hidden;
+}
+
+.container-card:hover {
+  /* Effet hover sur les cartes */
+  opacity: 0.9;
+  transform: scale(1.01);
+}
+
+.container-card-img {
+  /* Empêche les images de prendre trop de place */
+  border-radius: 10px 10px 0 0;
+  width: 100%;
+  height: 60%;
+  object-fit: cover;
+}
+
+/* CSS Populaires */
+
+.container-populaires {
+  /* Section Populaires*/
+  background-color: var(--gris);
+  border-radius: 20px;
+  padding: 30px 40px 0 40px;
+  text-align: left;
+  width: 24%;
+  justify-content: flex-start;
+  display: flex;
+  flex-direction: column;
+}
+
+.populaires-card {
+  /* Affiche crrectment les cartes Populaires */
+  display: flex;
+  background-color: white;
+  box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.1);
+  border-radius: 15px;
+  height: 144px;
+  padding: 5px;
+  margin: 15px 0 30px 0;
+}
+
+.populaires-card:hover {
+  /* Hover cartes populaires */
+  opacity: 0.9;
+  transform: scale(1.01);
+}
+
+.populaires-card-title {
+  /* Permet d'aligne favicone */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.populaires-card-img {
+  /* Fixe la taille des images populaires */
+  border-radius: 10px 0 0px 10px;
+  width: 40%;
+  min-width: 137px;
+  height: 100%;
+  min-height: 144px;
+  object-fit: cover;
+}
+
+.populaires-card-note {
+  /* Espace entre prix et étoiles */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 0 15px 5px 15px;
+}
+
+/* CSS Activités */
+
+.asside {
+  /* Marge entre activités et footer */
+  text-align: left;
+  margin: 40px 0px;
+}
+
+.activites {
+  /* Fiwe la taille des cartes activités */
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-top: 20px;
+}
+
+.activites a {
+  /* Esapce entre les cartes activités */
+  width: 22%;
+}
+
+.activites-card {
+  /* Mise en forme des cartes activités */
+  background-color: white;
+  box-shadow: 0px 3px 15px var(--gris);
+  border-radius: 15px;
+  height: 444px;
+  display: flex;
+  flex-direction: column;
+}
+
+.activites-card:hover {
+  /* Hover cartes activités */
+  opacity: 0.9;
+  transform: scale(1.01);
+}
+
+.activites-card-img {
+  /* Fixe la taille des cartes activités */
+  border-radius: 15px 15px 0 0;
+  width: 100%;
+  height: 88%;
+  object-fit: cover;
+}
+
+.activites-card-txt {
+  /* Marges textes activités */
+  padding: 0px 20px;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+/* CSS Footer */
+
+.footer-content {
+  /* Footer sur une ligne */
+  background-color: var(--gris);
+  padding: 40px 70px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.footer-article {
+  /* Espaces entre les trois articles */
+  width: 30%;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.footer-article a {
+  /* Mise en place en colonne des liens */
+  display: block;
+  margin-top: 10px;
+}
+
+.footer-article a:hover {
+  /* Effet hover bleu */
+  color: var(--bleu)
+}
+
+/*sur les écrans des tablettes*/
+@media screen and (min-width: 778px) and (max-width: 992px) {
+
+  .page {
+    padding: 0 60px;
+    width: auto;
+  }
+
+  /*nav*/
+  nav ul {
+    width: 30%;
+  }
+
+
+  /*header*/
+  /*filtres de recherche*/
+  .header-filtre-texte {
+    font-size: 17px;
+  }
+
+  .header-filtres-button {
+    margin-left: 30px;
+    justify-content: flex-start;
+  }
+
+  /* barre de recherche*/
+  .header-recherche {
+    width: 25%;
+  }
+
+  section {
+    flex-direction: column;
+  }
+
+
+  /*cards d'hebergement*/
+  .container {
+    width: auto;
+    text-align: left;
+    margin-bottom: 50px;
+  }
+
+  .container-card-block a {
+    width: 32%;
+    margin-bottom: 24px;
+  }
+
+  .container-card {
+    margin: 20px 20px 0 0;
+    display: flex;
+    flex-direction: column;
+  }
+
+  /*cards les plus populaire*/
+  .container-populaires {
+    text-align: left;
+    width: auto;
+    margin-bottom: 40px;
+  }
+
+  .populaires-card-block {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .populaires-card-block a {
+    width: 30%;
+  }
+
+  .populaires-card {
+    width: 100%;
+  }
+
+  .populaires-card-note {
+    padding: 0 8px;
+  }
+
+  /*activités à marseille*/
+  .activites {
+    margin-top: 30px;
+    ;
+  }
+
+  .activites-card {
+    height: 267px;
+  }
+
+  .activites a {
+    width: 21%;
+  }
+
+  .activites-card-img {
+    height: 78%;
+  }
+
+  /*footer de la page*/
+  .footer-content {
+    padding: 40px 70px 60px 70px;
+  }
+}
+
+/*sur les écrans des portables*/
+@media screen and (max-width: 768px) {
+  /*Typography*/
+
+  h5 {
+    font-size: 11px;
+  }
+
+  span {
+    display: none;
+  }
+
+  /*main divs for page design*/
+  .page {
+    padding: 0;
+    width: auto;
+
+  }
+
+  /*header*/
+  header {
+    width: 100%;
+    margin: auto;
+
+  }
+
+  .header-content {
+    width: 88%;
+    margin: auto;
+  }
+
+  /*filtres de recherche*/
+  .header-filtres {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .header-filtre-texte {
+    margin-left: 8px;
+  }
+
+  .filter-block {
+    height: 50%;
+    width: 100%;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  .header-filtres-button {
+    margin: 10px 0;
+    align-items: center;
+    width: 38%;
+    height: 25px;
+    padding: 10px 16px;
+    justify-content: left;
+  }
+
+  /*nav*/
+  .navbar-content {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin-top: 20px;
+  }
+
+  nav ul {
+    width: 100%;
+  }
+
+  nav li {
+    width: 50%;
+    border-bottom: 2px solid #F2F2F2;
+    padding-bottom: 16px;
+  }
+
+  nav li:hover {
+    border-bottom: 2px solid #0065FC;
+  }
+
+  nav {
+    margin-bottom: 30px;
+  }
+
+  .navbar-liens {
+    margin: 15px 0px;
+    text-align: center;
+  }
+
+  li a {
+    padding: 0;
+  }
+
+  li a:hover {
+    color: #0065FC;
+    border-top: 0px solid;
+
+  }
+
+  .header-search {
+    margin-top: 30px;
+  }
+
+  i.bouton-recherche-icone {
+    display: block;
+    margin: 0 15px;
+  }
+
+  /* barre de recherche*/
+  .header-recherche {
+    width: 100%;
+  }
+
+  .bouton-recherche {
+    padding: 0 4px;
+  }
+
+  /*advertising du site*/
+  .position {
+    margin-top: 10px;
+    margin-bottom: 20px;
+  }
+
+  section {
+    flex-direction: column-reverse;
+    /* *********************** */
+  }
+
+  /*cards d'hebergement*/
+  article {
+    width: 100%;
+  }
+
+  .container {
+    background-color: white;
+    padding: 0px;
+    margin: auto;
+    text-align: left;
+    margin-top: 30px;
+    width: 88%;
+  }
+
+  .container-card-block {
+    flex-direction: column;
+    margin-bottom: 0px;
+    align-items: center;
+    margin: auto;
+    width: 100%;
+  }
+
+  .container-card {
+    width: auto;
+    max-width: none;
+    margin-bottom: 20px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .container-card-block a {
+    width: 100%;
+    margin: auto;
+  }
+
+  h4 a {
+    display: none;
+  }
+
+  /*cards les plus populaires*/
+  .container-populaires {
+    border-radius: 0px;
+    padding: 20px 0px 30px 0px;
+    width: 100%;
+  }
+
+  .populaires-card-block {
+    margin-top: 20px;
+  }
+
+  .populaires-card {
+    width: 88%;
+    margin: auto;
+    margin-bottom: 20px;
+
+  }
+
+  .populaires-card-title {
+    width: 88%;
+    margin: auto;
+  }
+
+  /*activités à marseille*/
+  .asside {
+    margin: 30px 0px 60px 0px;
+    text-align: left;
+  }
+
+  .asside h2 {
+    margin-left: 25px;
+    width: 30%;
+  }
+
+  .activites {
+    flex-direction: column;
+  }
+
+  .activites a {
+    width: 100%;
+  }
+
+  .activites-card {
+    width: 90%;
+    height: 190px;
+    margin: auto;
+    margin-bottom: 20px;
+  }
+
+  .activites-card-img {
+    height: 70%;
+  }
+
+
+  /*footer de la page*/
+  .footer-content {
+    flex-direction: column;
+    padding: 40px 30px;
+  }
+
+  .footer-article {
+    width: 100%;
+    margin-bottom: 30px;
+
+  }
+}
