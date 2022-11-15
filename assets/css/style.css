@@ -7,11 +7,6 @@
   --gris: #F2F2F2;
 }
 
-/* HTML Validator impose un titre ligne 102 */
-.only-for-validator {
-  display: none;
-}
-
 /* Police et taille imposée par Figma */
 body {
   max-width: 1440px;
@@ -268,7 +263,7 @@ i.bouton-recherche-icone {
 
 /* CSS Main */
 
-section {
+.section {
   /* Permet d'afficher les plus populaire à côté des hébéregements en Desktop */
   display: flex;
   justify-content: space-between;
@@ -501,7 +496,7 @@ section {
     width: 25%;
   }
 
-  section {
+  .section {
     flex-direction: column;
   }
 
@@ -695,7 +690,7 @@ section {
     margin-bottom: 20px;
   }
 
-  section {
+  .section {
     flex-direction: column-reverse;
     /* *********************** */
   }
