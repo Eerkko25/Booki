@@ -344,12 +344,12 @@ i.bouton-recherche-icone {
 .populaires-card {
   /* Affiche crrectment les cartes Populaires */
   display: flex;
-  background-color: white;
-  box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.1);
-  border-radius: 15px;
-  height: 144px;
   padding: 5px;
-  margin: 15px 0 30px 0;
+  border-radius: 20px;
+  box-shadow: 0 0 10px #0000002e;
+  background-color: white;
+  height: 126px;
+  margin-bottom: 25px;
 }
 
 .populaires-card:hover {
@@ -367,12 +367,11 @@ i.bouton-recherche-icone {
 
 .populaires-card-img {
   /* Fixe la taille des images populaires */
-  border-radius: 10px 0 0px 10px;
-  width: 40%;
-  min-width: 137px;
-  height: 100%;
-  min-height: 144px;
+  border-top-left-radius: 15px;
+  border-bottom-left-radius: 15px;
   object-fit: cover;
+  width: 33%;
+  height: 115px;
 }
 
 .populaires-card-note {
@@ -706,7 +705,11 @@ i.bouton-recherche-icone {
     margin: auto;
     text-align: left;
     margin-top: 30px;
-    width: 88%;
+    width: 100%;
+    background-color: var(--gris);
+    border-radius: 15px;
+    padding: 5px;
+    margin: auto;
   }
 
   .container-card-block {
@@ -739,6 +742,10 @@ i.bouton-recherche-icone {
     border-radius: 0px;
     padding: 20px 0px 30px 0px;
     width: 100%;
+    background-color: var(--gris);
+    border-radius: 15px;
+    padding: 5px;
+    margin: auto;
   }
 
   .populaires-card-block {
