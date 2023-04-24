@@ -7,4 +7,4 @@ des activités dans la ville de leur choix.
 
 Vous êtes chargé d'intégrer l'interface du site responsive en HTML/CSS.
 
-Lien GitHub : https://github.com/Eerkko25/Booki.git
+Site hébérgé sur : http://booki.byethost7.com/
